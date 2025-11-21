@@ -1,0 +1,96 @@
+########################################
+# Python
+########################################
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pytest_cache/
+*.coverage
+.coverage
+.coverage.*
+.cache
+pip-wheel-metadata/
+*.egg-info/
+.eggs/
+venv/
+.venv/
+env/
+env.bak/
+venv.bak/
+
+########################################
+# Bytecode / Caches
+########################################
+*.DS_Store
+*.idea/
+*.vscode/
+*.mypy_cache/
+*.pytest_cache/
+*.ruff_cache/
+
+########################################
+# Virtual environment
+########################################
+env/
+.venv/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+########################################
+# Logs
+########################################
+*.log
+logs/
+*.out
+
+########################################
+# FastAPI / Uvicorn
+########################################
+*.db
+*.sqlite
+*.pid
+
+########################################
+# Model artifacts (optional)
+########################################
+models/
+checkpoints/
+outputs/
+runs/
+*.pt
+*.pth
+*.onnx
+*.joblib
+*.pickle
+*.pkl
+
+########################################
+# Uploads & generated images
+########################################
+cams/
+inference_tmp/
+*.png
+*.jpg
+*.jpeg
+
+########################################
+# Environment variables / config
+########################################
+.env
+.env.local
+.env.*.local
+
+########################################
+# Jupyter / experiments
+########################################
+.ipynb_checkpoints/
+*.ipynb
+
+########################################
+# OS junk
+########################################
+.DS_Store
+Thumbs.db
