@@ -199,3 +199,45 @@ def generate_cam_stub(image: Image.Image) -> str:
 ## 🩺 Disclaimer
 This service is strictly for **educational purposes**.  
 It must **not** be used for diagnosing, treating, or managing medical conditions.
+
+---
+
+# 📚 How to Train Your Model
+
+This project includes a full PyTorch training pipeline for fine-tuning a ResNet18 classifier on melanoma vs benign dermatoscopic images. Training happens entirely inside `scripts/train_melanoma.py` and produces a model checkpoint that the FastAPI inference service automatically loads.
+
+> ⚠️ Educational use only — not for diagnosis.
+
+## 🗂️ 1. Prepare Your Dataset
+
+Your dataset must follow this folder layout:
+
+```
+data/
+  train/
+    benign/
+    malignant/
+  val/
+    benign/
+    malignant/
+```
+
+Use helper scripts to populate these folders.
+
+## 🧠 2. Pretrained Model
+The model uses an ImageNet-pretrained ResNet18 backbone.
+
+## 🏋️ 3. Train
+```
+python scripts/train_melanoma.py --data-root data --epochs 10 --batch-size 32 --out models/melanoma_resnet.pt
+```
+
+## 🔄 4. Restart Inference Server
+Restart FastAPI to load the new weights.
+
+## 🔥 5. Grad-CAM Generation
+After training, `/infer` will produce improved heatmaps.
+
+## 📈 6. Optional Metrics
+Extend the training script to compute AUROC, sensitivity, and specificity.
+

@@ -75,6 +75,7 @@ inference_tmp/
 *.png
 *.jpg
 *.jpeg
+*.csv
 
 ########################################
 # Environment variables / config
