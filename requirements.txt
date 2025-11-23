@@ -1,9 +1,27 @@
-fastapi
-uvicorn[standard]
-pydantic
-torch
-torchvision
-Pillow
-numpy
-pydantic_settings
-boto3
+# --- FastAPI + Server ---
+fastapi==0.110.0
+uvicorn[standard]==0.29.0
+
+# --- Image handling ---
+Pillow==10.3.0
+numpy==1.26.4
+
+# --- ML / Vision ---
+torch==2.2.1
+torchvision==0.17.1
+
+# --- Grad-CAM helpers (optional if you use OpenCV smoothing) ---
+opencv-python-headless==4.9.0.80
+
+# --- Config / Settings ---
+pydantic==2.7.0
+pydantic-settings==2.2.1
+
+# --- Multipart file uploads ---
+python-multipart==0.0.9
+
+# --- R2 / S3 integration ---
+boto3==1.34.59
+
+# --- Utilities ---
+requests==2.31.0

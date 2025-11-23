@@ -39,8 +39,6 @@ def health():
 
 @app.post("/infer", response_model=InferResponse)
 async def infer(file: UploadFile = File(...)):
-    print("HIT /infer")
-
     # Basic validation
     if not file.content_type or not file.content_type.startswith("image/"):
         raise HTTPException(status_code=400, detail="File must be an image.")
